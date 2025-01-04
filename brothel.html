@@ -18,12 +18,8 @@
             color: white;
             text-align: center;
         }
-        h1 {
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
+        #content {
+            display: none;
         }
         button {
             background: #ffffff;
@@ -41,10 +37,40 @@
             color: white;
         }
     </style>
+    <script>
+        // Dynamically load the page content
+        window.onload = function() {
+            const content = `
+                <h1>Brothel Issues in Bangladesh</h1>
+                <p>Brothel-related issues pose social and cultural challenges that require attention and resolution.</p>
+                <button onclick="window.location.href='index.html'">Homepage</button>
+            `;
+            document.getElementById("content").innerHTML = content;
+            document.getElementById("content").style.display = "block";
+        };
+
+        // Disable right-click
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+
+        // Disable specific keyboard shortcuts
+        document.addEventListener("keydown", function (e) {
+            if (
+                e.key === "F12" ||                     // DevTools
+                (e.ctrlKey && e.shiftKey && e.key === "I") || // Ctrl+Shift+I
+                (e.ctrlKey && e.shiftKey && e.key === "C") || // Ctrl+Shift+C
+                (e.ctrlKey && e.shiftKey && e.key === "J") || // Ctrl+Shift+J
+                (e.ctrlKey && e.key === "U")               // Ctrl+U (View Source)
+            ) {
+                e.preventDefault();
+            }
+        });
+    </script>
 </head>
 <body>
-    <h1>Brothel Issues in Bangladesh</h1>
-    <p>Brothel-related issues pose social and cultural challenges that require attention and resolution.</p>
-    <button onclick="window.location.href='index.html'">Homepage</button>
+    <div id="content">
+        <!-- Content will be dynamically loaded here -->
+    </div>
 </body>
 </html>
