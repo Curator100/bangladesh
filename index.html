@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Bangladesh</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #0B6623, #A4D65E);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 80%;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        button {
+            background-color: #FF8C00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #FF4500;
+        }
+
+        @media (min-width: 768px) {
+            button {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Bangladesh</h1>
+    <p>Discover the beauty, culture, and stories of this vibrant country. Choose your journey below.</p>
+
+    <div class="button-container">
+        <button onclick="location.href='good.html'">Explore the Good</button>
+        <button onclick="location.href='bad.html'">Explore the Challenges</button>
+    </div>
+</body>
+</html>
